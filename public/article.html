@@ -1,0 +1,8 @@
+<!--article.html partial-->
+<div class="container" ng-controller="articleController">
+  <div><h2>{{ title }}</h2></div>
+  <div><p ng-bind-html="wikiBody | trustAsHtml"></p></div>
+  <div class="col-sm-offset-11 col-sm-5">
+    <button type="submit" class="btn btn-danger" ng-click='edit()'>Edit</button>
+  </div>
+</div>
