@@ -93,17 +93,3 @@ app.controller('editController', function(articleFactory, $scope, $rootScope, $l
     $location.path("/grading/"+newArticle.title);
   };
 });
-app.controller('searchController', function($scope, Solstice) {
-  $scope.query = "";
-  $scope.search = function() {
-    Solstice.search({
-      q: $scope.query,
-      fl: 'title',
-      rows: 10
-    })
-    .then(function (data){
-    $scope.results = data.docs;
-    console.log(data.docs);
-    });
-  }
-});
